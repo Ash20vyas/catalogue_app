@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sangeeth_player/home_page.dart';
 
 void  main()
 {
@@ -8,19 +9,10 @@ class MyApp extends StatelessWidget {
   const MyApp({ Key? key }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    int count = 1;
-    String name = "Ashutosh Vyas";
-
+  Widget build(BuildContext context) 
+  {
     return MaterialApp(
-      home: Material(
-        child: Align(
-          alignment: Alignment.centerRight,
-          child: Container(
-            child: Text("Welcome to my $count\st flutter project!\nMade by $name"),
-          ),
-        ),
-      )
+      home: HomePage()
     );
   }
 }
