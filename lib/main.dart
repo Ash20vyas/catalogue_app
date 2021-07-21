@@ -1,18 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:sangeeth_player/home_page.dart';
+import 'package:sangeeth_player/screens/home_screen.dart';
+import 'package:sangeeth_player/screens/login_screen.dart';
 
-void  main()
-{
+void main() {
   runApp(MyApp());
 }
+
 class MyApp extends StatelessWidget {
-  const MyApp({ Key? key }) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) 
-  {
+  Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage()
+      themeMode: ThemeMode.light,
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      ),
+      initialRoute: "/home",
+      routes: {
+        "/": (context) => LoginScreen(),
+        "/home": (context) => HomeScreen(),
+        "/Login": (context) => LoginScreen(),
+      },
     );
   }
 }
