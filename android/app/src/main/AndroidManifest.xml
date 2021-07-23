@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.LoneWolf.sangeeth_player">
+    package="com.LoneWolf.catalogue_app">
    <application
-        android:label="sangeeth_player"
+        android:label="catalogue_app"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sangeeth_player/widgets/drawer.dart';
+import 'package:catalogue_app/widgets/drawer.dart';
 class HomeScreen extends StatelessWidget 
 {
   const HomeScreen({ Key? key }) : super(key: key);

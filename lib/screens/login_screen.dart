@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sangeeth_player/utils/routes.dart';
+import 'package:catalogue_app/utils/routes.dart';
 class LoginScreen extends StatefulWidget {
   @override
   _LoginScreenState createState() => _LoginScreenState();

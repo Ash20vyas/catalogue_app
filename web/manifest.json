@@ -1,6 +1,6 @@
 {
-    "name": "sangeeth_player",
-    "short_name": "sangeeth_player",
+    "name": "catalogue_app",
+    "short_name": "catalogue_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

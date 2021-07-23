@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sangeeth_player/screens/home_screen.dart';
-import 'package:sangeeth_player/screens/login_screen.dart';
-import 'package:sangeeth_player/utils/routes.dart';
+import 'package:catalogue_app/screens/home_screen.dart';
+import 'package:catalogue_app/screens/login_screen.dart';
+import 'package:catalogue_app/utils/routes.dart';
 void main() {
   runApp(MyApp());
 }
