@@ -1,2 +1,2 @@
-# sangeeth_player
- A basic Music Player
+# Catalogue App
+ A basic app for shopping
