@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sangeeth_player/widgets/drawer.dart';
 class HomeScreen extends StatelessWidget 
 {
   const HomeScreen({ Key? key }) : super(key: key);
@@ -17,7 +18,7 @@ class HomeScreen extends StatelessWidget
           child: Text("Welcome to my $count\st flutter project!\nMade by $name"),
         ),
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
       );
   }
 }

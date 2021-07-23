@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sangeeth_player/screens/home_screen.dart';
 import 'package:sangeeth_player/screens/login_screen.dart';
-
+import 'package:sangeeth_player/utils/routes.dart';
 void main() {
   runApp(MyApp());
 }
@@ -12,16 +13,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.dark,
-      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+        fontFamily: GoogleFonts.lato().fontFamily,
+        ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
-      initialRoute: "/home",
+      debugShowCheckedModeBanner: false,
+      initialRoute: MyRoutes.homeRoute,
       routes: {
         "/": (context) => LoginScreen(),
-        "/home": (context) => HomeScreen(),
-        "/Login": (context) => LoginScreen(),
+        MyRoutes.homeRoute : (context) => HomeScreen(),
+        MyRoutes.loginRoute : (context) => LoginScreen(),
       },
     );
   }
