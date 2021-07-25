@@ -1,4 +1,5 @@
 import 'package:catalogue_app/models/catalogue.dart';
+import 'package:catalogue_app/widgets/home_widgets/add_to_cart.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -54,14 +55,7 @@ class DetailScreen extends StatelessWidget {
           buttonPadding: EdgeInsets.zero,
           children: [
             "\$${catalogue.price}".text.bold.xl4.red800.make(),
-            ElevatedButton(
-              onPressed: (){},
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(context.theme.buttonColor),
-                shape: MaterialStateProperty.all(StadiumBorder())
-              ),
-              child: "Add to Cart".text.make(),
-              ).wh(120, 50)
+            AddToCart(catalogue: catalogue).wh(120, 50)
           ],
         ).p32(),
       ),

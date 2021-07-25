@@ -3,9 +3,10 @@ import 'package:catalogue_app/screens/details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
+import 'add_to_cart.dart';
 import 'catalogue_image.dart';
 
-class CatalogueList extends StatelessWidget {
+class  CatalogueList extends StatelessWidget {
   const CatalogueList({ Key? key }) : super(key: key);
 
   @override
@@ -58,14 +59,7 @@ class CatalogueItem extends StatelessWidget {
                 buttonPadding: EdgeInsets.zero,
                 children: [
                   "\$${catalogue.price}".text.bold.xl.make(),
-                  ElevatedButton(
-                    onPressed: (){},
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(context.theme.buttonColor),
-                      shape: MaterialStateProperty.all(StadiumBorder())
-                    ),
-                    child: "Add to Cart".text.make(),
-                    )
+                  AddToCart(catalogue: catalogue),
                 ],
               ).pOnly(right: 8.0)
             ],
@@ -75,3 +69,4 @@ class CatalogueItem extends StatelessWidget {
     ).color(context.cardColor).roundedLg.square(150).make().py16();
   }
 }
+

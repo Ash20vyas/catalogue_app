@@ -2,7 +2,10 @@ import 'dart:convert';
 
 class CatalogueModel {
   static List<Item>? items;
+  static final catalgoueModel = CatalogueModel._internal();
+  CatalogueModel._internal();
 
+  factory CatalogueModel() => catalgoueModel;
 
   //Get Item by ID
   Item getById(int id) => items!.firstWhere((element) => element.id == id, orElse: null);
