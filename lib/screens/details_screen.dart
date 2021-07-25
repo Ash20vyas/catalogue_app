@@ -14,7 +14,7 @@ class DetailScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
 
       body: SafeArea(
         bottom: false,
@@ -30,11 +30,11 @@ class DetailScreen extends StatelessWidget {
                 arcType: VxArcType.CONVEY,
                 edge: VxEdge.TOP,
                 child: Container(
-                  color: Colors.white,
+                  color: context.cardColor,
                   width: context.screenWidth,
                   child: Column(
                     children: [
-                      catalogue.name.text.xl4.color(MyTheme.darkBluishColor).bold.make(),
+                      catalogue.name.text.xl4.color(context.accentColor).bold.make(),
                       catalogue.desc.text.xl.make(),
                       10.heightBox,
                       "Stet aliquyam invidunt sit eirmod justo dolores elitr ut no, diam justo labore invidunt dolores et at gubergren, dolor et dolor dolores duo. Eos lorem sea vero stet amet labore tempor sed sadipscing, gubergren sadipscing ea elitr nonumy amet sadipscing stet voluptua dolor, consetetur consetetur diam et lorem diam at."
@@ -49,7 +49,7 @@ class DetailScreen extends StatelessWidget {
       ),
 
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
@@ -58,7 +58,7 @@ class DetailScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: (){},
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(MyTheme.darkBluishColor),
+                backgroundColor: MaterialStateProperty.all(context.theme.buttonColor),
                 shape: MaterialStateProperty.all(StadiumBorder())
               ),
               child: "Add to Cart".text.make(),

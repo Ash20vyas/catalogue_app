@@ -39,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) 
   {
     return Scaffold(
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
       body: SafeArea(
         child: Container(
           // padding: Vx.m32,
@@ -58,8 +58,8 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
-        child: Icon(CupertinoIcons.cart),
-        backgroundColor: MyTheme.darkBluishColor,
+        child: Icon(CupertinoIcons.cart,color: Colors.white,),
+        backgroundColor: context.theme.buttonColor,
       ),
     );
   }
