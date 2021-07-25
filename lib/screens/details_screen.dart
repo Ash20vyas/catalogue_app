@@ -11,27 +11,10 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      backgroundColor: MyTheme.creamColor,
-
-      bottomNavigationBar: Container(
-        color: Colors.white,
-        child: ButtonBar(
-          alignment: MainAxisAlignment.spaceBetween,
-          buttonPadding: EdgeInsets.zero,
-          children: [
-            "\$${catalogue.price}".text.bold.xl4.red800.make(),
-            ElevatedButton(
-              onPressed: (){},
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(MyTheme.darkBluishColor),
-                shape: MaterialStateProperty.all(StadiumBorder())
-              ),
-              child: "Buy".text.make(),
-              ).wh(100, 50)
-          ],
-        ).p32(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
       ),
+      backgroundColor: MyTheme.creamColor,
 
       body: SafeArea(
         bottom: false,
@@ -54,13 +37,34 @@ class DetailScreen extends StatelessWidget {
                       catalogue.name.text.xl4.color(MyTheme.darkBluishColor).bold.make(),
                       catalogue.desc.text.xl.make(),
                       10.heightBox,
+                      "Stet aliquyam invidunt sit eirmod justo dolores elitr ut no, diam justo labore invidunt dolores et at gubergren, dolor et dolor dolores duo. Eos lorem sea vero stet amet labore tempor sed sadipscing, gubergren sadipscing ea elitr nonumy amet sadipscing stet voluptua dolor, consetetur consetetur diam et lorem diam at."
+                      .text.make().p16(),
                     ], 
-                  ).py64(),
+                  ).py(45),
                 ),
               ),
             )
           ],
         ),
+      ),
+
+      bottomNavigationBar: Container(
+        color: Colors.white,
+        child: ButtonBar(
+          alignment: MainAxisAlignment.spaceBetween,
+          buttonPadding: EdgeInsets.zero,
+          children: [
+            "\$${catalogue.price}".text.bold.xl4.red800.make(),
+            ElevatedButton(
+              onPressed: (){},
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(MyTheme.darkBluishColor),
+                shape: MaterialStateProperty.all(StadiumBorder())
+              ),
+              child: "Add to Cart".text.make(),
+              ).wh(120, 50)
+          ],
+        ).p32(),
       ),
     );
   }

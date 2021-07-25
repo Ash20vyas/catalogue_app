@@ -1,3 +1,4 @@
+import 'package:catalogue_app/screens/cart_screen.dart';
 import 'package:catalogue_app/widgets/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:catalogue_app/utils/routes.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         "/": (context) => LoginScreen(),
         MyRoutes.homeRoute : (context) => HomeScreen(),
         MyRoutes.loginRoute : (context) => LoginScreen(),
+        MyRoutes.cartRoute : (context) => CartScreen(),
       },
     );
   }
