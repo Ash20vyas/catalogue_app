@@ -65,7 +65,7 @@ class Item {
       desc: map['desc'],
       price: map['price'],
       color: map['color'],
-      imgURL: map['imgURL'],
+      imgURL: map['image'],
     );
   }
 

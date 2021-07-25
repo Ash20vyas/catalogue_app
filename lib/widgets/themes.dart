@@ -9,6 +9,7 @@ class MyTheme{
     canvasColor: creamColor,
     buttonColor: darkBluishColor,
     accentColor: darkBluishColor,
+    focusColor: Vx.gray400,
     fontFamily: GoogleFonts.poppins().fontFamily,
     appBarTheme: AppBarTheme(
       color: Colors.white,
@@ -24,6 +25,7 @@ class MyTheme{
     canvasColor: darkCreamColor,
     buttonColor: lightBluishColor,
     accentColor: Colors.white,
+    focusColor: Vx.gray600,
     fontFamily: GoogleFonts.poppins().fontFamily,
     appBarTheme: AppBarTheme(
       color: Colors.black,
