@@ -4,7 +4,6 @@ import 'package:catalogue_app/models/catalogue.dart';
 import 'package:catalogue_app/utils/routes.dart';
 import 'package:catalogue_app/widgets/home_widgets/catalogue_header.dart';
 import 'package:catalogue_app/widgets/home_widgets/catalogue_list.dart';
-import 'package:catalogue_app/widgets/themes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
