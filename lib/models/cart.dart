@@ -14,8 +14,10 @@ class CartModel{
   //store IDs of each Item
   final List<int> _itemId = [];
 
+  // ignore: unnecessary_getters_setters
   CatalogueModel get catalogue => _catalogue;
 
+  // ignore: unnecessary_getters_setters
   set catalogue(CatalogueModel newCatalogue){
     _catalogue = newCatalogue;
   }
