@@ -1,7 +1,7 @@
 # 🛒Catalogue App [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-Flutter implementation of a Catalogue app to create a seamless shopping experinece.</br>
-It consists of a **Login Screen, Home Screen, Detain Screen** and **Cart Screen**
+Flutter implementation of a Catalogue app to create a seamless shopping experience.</br>
+It consists of a **Login Screen, Home Screen, Detail Screen** and **Cart Screen**
 
 Star⭐ the repo if you like what you see😉.
  
