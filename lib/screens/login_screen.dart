@@ -41,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   children: [
                     Image.asset(
-                      "assets/images/login_image.png",
+                      "assets/images/login.png",
                       fit: BoxFit.cover,
                     ),
                     SizedBox(
@@ -99,7 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: InkWell(
                             onTap: () => moveToHome(context),
                             child: AnimatedContainer(
-                              duration: Duration(seconds: 1),
+                              duration: Duration(milliseconds: 300),
                               width: changeButton ? 50 : 150.0,
                               height: 50.0,
                               alignment: Alignment.center,
@@ -113,7 +113,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 18,
+                                        fontSize: 16,
                                       ),
                                     ),
                             ),
