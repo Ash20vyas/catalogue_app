@@ -9,21 +9,22 @@ import 'package:vxstate/vxstate.dart';
 class AddToCart extends StatelessWidget {
   final Item catalogue;
 
-  AddToCart({Key? key,required this.catalogue}) : super(key: key);
+  AddToCart({Key? key, required this.catalogue}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    VxState.watch(context, on:[AddMutaion, RemoveMutaion]);
+    VxState.watch(context, on: [AddMutaion, RemoveMutaion]);
     final CartModel _cart = (VxState.store as MyStore).cart;
-    bool isInCart = _cart.items.contains(catalogue)? true:false;
+    bool isInCart = _cart.items.contains(catalogue) ? true : false;
     return ElevatedButton(
-      onPressed: (){
-        if(!isInCart){AddMutaion(catalogue);}
+      onPressed: () {
+        if (!isInCart) {
+          AddMutaion(catalogue);
+        }
       },
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(context.theme.buttonColor),
-        shape: MaterialStateProperty.all(StadiumBorder())
-      ),
-      child: isInCart? Icon(Icons.done) : Icon(CupertinoIcons.cart_badge_plus),
+          backgroundColor: MaterialStateProperty.all(context.theme.buttonColor),
+          shape: MaterialStateProperty.all(StadiumBorder())),
+      child: isInCart ? Icon(Icons.done) : Icon(CupertinoIcons.cart_badge_plus),
     );
   }
 }

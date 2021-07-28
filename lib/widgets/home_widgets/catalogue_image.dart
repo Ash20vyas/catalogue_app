@@ -9,7 +9,14 @@ class CatalogueImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.network(
-            image,
-            ).box.rounded.p8.color(context.canvasColor).make().p16().wPCT(context: context, widthPCT: context.isMobile ? 40 : 20);
+      image,
+    )
+        .box
+        .rounded
+        .p8
+        .color(context.canvasColor)
+        .make()
+        .p16()
+        .wPCT(context: context, widthPCT: context.isMobile ? 40 : 20);
   }
 }

@@ -5,7 +5,6 @@ import 'package:velocity_x/velocity_x.dart';
 import 'package:vxstate/vxstate.dart';
 
 class CartScreen extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,23 +34,24 @@ class _CardTotal extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           VxConsumer(
-            mutations: {RemoveMutaion}, 
+            mutations: {RemoveMutaion},
             notifications: {},
-            builder: (context, store, _){
+            builder: (context, store, _) {
               return "\$${_cart.totalPrice}"
-                .text
-                .xl5
-                .color(context.theme.accentColor)
-                .make();
+                  .text
+                  .xl5
+                  .color(context.theme.accentColor)
+                  .make();
             },
           ),
           30.widthBox,
           ElevatedButton(
             style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(context.theme.buttonColor)
-            ),
-            onPressed: (){
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: "Buy not yet Supported".text.make()));
+                backgroundColor:
+                    MaterialStateProperty.all(context.theme.buttonColor)),
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: "Buy not yet Supported".text.make()));
             },
             child: "Buy".text.white.make(),
           ).w32(context),
@@ -61,25 +61,24 @@ class _CardTotal extends StatelessWidget {
   }
 }
 
-
-
 class _CartList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     VxState.watch(context, on: [RemoveMutaion]);
     final CartModel _cart = (VxState.store as MyStore).cart;
-    return _cart.items.isEmpty? "Cart is Empty".text.xl3.makeCentered() : ListView.builder(
-      itemCount: _cart.items.length,
-      itemBuilder: (context, index) => ListTile(
-        leading: Icon(Icons.done),
-        trailing: IconButton(
-          icon: Icon(Icons.remove_circle_outline),
-          onPressed: (){
-            RemoveMutaion(_cart.items[index]);
-          },
-        ),
-        title: _cart.items[index].name.text.make(),
-      )
-    );
+    return _cart.items.isEmpty
+        ? "Cart is Empty".text.xl3.makeCentered()
+        : ListView.builder(
+            itemCount: _cart.items.length,
+            itemBuilder: (context, index) => ListTile(
+                  leading: Icon(Icons.done),
+                  trailing: IconButton(
+                    icon: Icon(Icons.remove_circle_outline),
+                    onPressed: () {
+                      RemoveMutaion(_cart.items[index]);
+                    },
+                  ),
+                  title: _cart.items[index].name.text.make(),
+                ));
   }
 }
